@@ -17,18 +17,17 @@
 <!-- NOT (geliştirici notu): Telefon, WhatsApp, e-posta, adres ve canonical URL alanları
      yer tutucudur ("XXX" ile işaretli). Yayına almadan önce gerçek bilgilerle değiştirin. -->
 
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2310161B'/%3E%3Cpath d='M34 8 14 36h14l-4 20 22-30H32z' fill='%23C9793D'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%231E2266'/%3E%3Cpath d='M34 8 14 36h14l-4 20 22-30H32z' fill='%23FFC53D'/%3E%3C/svg%3E">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800;900&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "ElectricalContractor",
   "name": "Peker Enerji",
-  "image": "",
   "description": "Mersin Toroslar, Mezitli, Tece ve Akdeniz'de elektrik tesisatı, jeneratör satış-servis, güneş enerji sistemleri (GES) ve UPS/akü sistemleri.",
   "areaServed": [
     {"@type": "Place", "name": "Toroslar, Mersin"},
@@ -36,11 +35,7 @@
     {"@type": "Place", "name": "Tece, Mersin"},
     {"@type": "Place", "name": "Akdeniz, Mersin"}
   ],
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Mersin",
-    "addressCountry": "TR"
-  },
+  "address": {"@type": "PostalAddress", "addressLocality": "Mersin", "addressCountry": "TR"},
   "telephone": "+90XXXXXXXXXX",
   "priceRange": "$$",
   "url": "https://www.pekerenerji.com/",
@@ -55,317 +50,146 @@
 
 <style>
   :root{
-    --bg:#10161B;
-    --bg-alt:#161E24;
-    --bg-card:#1A232A;
-    --line:#263139;
-    --line-soft:#1E2830;
-    --copper:#C9793D;
-    --copper-bright:#E8A868;
-    --live:#45B37C;
-    --text:#EDEAE3;
-    --text-dim:#98A2A9;
-    --text-faint:#5C6870;
-    --font-display:'Big Shoulders Display', sans-serif;
-    --font-body:'IBM Plex Sans', sans-serif;
-    --font-mono:'IBM Plex Mono', monospace;
+    --white:#FBFAF6;
+    --ink:#14163B;
+    --indigo:#1E2266;
+    --indigo-2:#272B7A;
+    --voltage:#FFC53D;
+    --voltage-2:#FFB000;
+    --spark:#6E86FF;
+    --text:#1B1D3D;
+    --text-dim:#5B5F7A;
+    --line:#E7E2D4;
+    --font-display:'Bricolage Grotesque', sans-serif;
+    --font-body:'Plus Jakarta Sans', sans-serif;
+    --font-mono:'Space Mono', monospace;
     --maxw:1180px;
   }
-
   *{box-sizing:border-box; margin:0; padding:0;}
   html{scroll-behavior:smooth;}
-  body{
-    background:var(--bg);
-    color:var(--text);
-    font-family:var(--font-body);
-    line-height:1.55;
-    -webkit-font-smoothing:antialiased;
-    overflow-x:hidden;
-  }
+  body{background:var(--white); color:var(--text); font-family:var(--font-body); line-height:1.55; -webkit-font-smoothing:antialiased; overflow-x:hidden;}
   img,svg{display:block; max-width:100%;}
   a{color:inherit; text-decoration:none;}
   ul{list-style:none;}
-  h1,h2,h3{font-family:var(--font-display); font-weight:800; letter-spacing:.01em; line-height:1.02;}
-
-  :focus-visible{
-    outline:2px solid var(--copper-bright);
-    outline-offset:3px;
-    border-radius:4px;
-  }
-
+  h1,h2,h3{font-family:var(--font-display); font-weight:800; letter-spacing:-.01em; line-height:1.04;}
+  :focus-visible{outline:2px solid var(--voltage); outline-offset:3px; border-radius:4px;}
   .wrap{max-width:var(--maxw); margin:0 auto; padding:0 28px;}
-  .eyebrow{
-    font-family:var(--font-mono);
-    font-size:12.5px;
-    letter-spacing:.18em;
-    text-transform:uppercase;
-    color:var(--copper);
-    display:flex;
-    align-items:center;
-    gap:10px;
-  }
-  .eyebrow::before{
-    content:"";
-    width:22px; height:1px;
-    background:var(--copper);
-    display:inline-block;
-  }
 
-  /* ---------- NAV ---------- */
-  header.site{
-    position:sticky; top:0; z-index:50;
-    background:rgba(16,22,27,.86);
-    backdrop-filter:blur(10px);
-    border-bottom:1px solid var(--line-soft);
-  }
-  .nav{
-    display:flex; align-items:center; justify-content:space-between;
-    padding:16px 28px;
-    max-width:var(--maxw); margin:0 auto;
-  }
-  .logo{
-    display:flex; align-items:baseline; gap:8px;
-    font-family:var(--font-display);
-    font-weight:800; font-size:22px; letter-spacing:.01em;
-  }
-  .logo .mark{color:var(--copper);}
-  .logo small{
-    font-family:var(--font-mono); font-weight:400;
-    font-size:11px; color:var(--text-dim); letter-spacing:.14em;
-  }
-  .nav-links{display:flex; align-items:center; gap:34px;}
-  .nav-links a{
-    font-size:14.5px; color:var(--text-dim); font-weight:500;
-    transition:color .2s ease;
-  }
-  .nav-links a:hover{color:var(--text);}
-  .nav-cta{
-    display:flex; align-items:center; gap:14px;
-  }
-  .btn{
-    display:inline-flex; align-items:center; gap:8px;
-    padding:11px 20px;
-    font-family:var(--font-body); font-weight:600; font-size:14.5px;
-    border-radius:3px;
-    border:1px solid transparent;
-    cursor:pointer;
-    transition:transform .18s ease, background .2s ease, border-color .2s ease;
-    white-space:nowrap;
-  }
-  .btn-primary{background:var(--copper); color:#12100C;}
-  .btn-primary:hover{background:var(--copper-bright); transform:translateY(-1px);}
+  .dark{background:var(--indigo); color:#EDEFFF;}
+  .dark .eyebrow{color:var(--voltage);}
+  .dark .eyebrow::before{background:var(--voltage);}
+  .dark p, .dark .text-dim{color:#B9BEEA;}
+  .dark .btn-ghost{border-color:#4247A0; color:#EDEFFF;}
+  .dark .btn-ghost:hover{border-color:var(--voltage); color:var(--voltage);}
+  .dark{--line:#34397E;}
+
+  .eyebrow{font-family:var(--font-mono); font-size:12.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--voltage-2); display:flex; align-items:center; gap:10px; font-weight:700;}
+  .eyebrow::before{content:""; width:22px; height:2px; background:var(--voltage-2); display:inline-block; border-radius:2px;}
+
+  /* NAV */
+  header.site{position:sticky; top:0; z-index:50; background:rgba(30,34,102,.92); backdrop-filter:blur(10px); border-bottom:1px solid #34397E;}
+  .nav{display:flex; align-items:center; justify-content:space-between; padding:16px 28px; max-width:var(--maxw); margin:0 auto;}
+  .logo{display:flex; align-items:center; gap:10px; font-family:var(--font-display); font-weight:800; font-size:20px; color:#fff;}
+  .logo-mark{width:32px; height:32px; border-radius:9px; background:var(--voltage); display:flex; align-items:center; justify-content:center; color:var(--indigo); font-size:17px; font-weight:800; flex-shrink:0;}
+  .logo small{font-family:var(--font-mono); font-weight:400; font-size:10.5px; color:#B9BEEA; letter-spacing:.12em; display:block; margin-top:1px;}
+  .nav-links{display:flex; align-items:center; gap:32px;}
+  .nav-links a{font-size:14.5px; color:#C7CBEE; font-weight:500; transition:color .2s ease;}
+  .nav-links a:hover{color:#fff;}
+  .nav-cta{display:flex; align-items:center; gap:12px;}
+  .btn{display:inline-flex; align-items:center; gap:8px; padding:12px 22px; font-family:var(--font-body); font-weight:700; font-size:14.5px; border-radius:999px; border:1.5px solid transparent; cursor:pointer; transition:transform .18s ease, background .2s ease, border-color .2s ease, box-shadow .2s ease; white-space:nowrap;}
+  .btn-primary{background:var(--voltage); color:var(--indigo);}
+  .btn-primary:hover{background:var(--voltage-2); transform:translateY(-2px); box-shadow:0 10px 24px -8px rgba(255,197,61,.55);}
   .btn-ghost{border-color:var(--line); color:var(--text);}
-  .btn-ghost:hover{border-color:var(--copper); color:var(--copper-bright);}
-  .nav-toggle{display:none; background:none; border:1px solid var(--line); color:var(--text); padding:9px 12px; border-radius:3px;}
+  .btn-ghost:hover{border-color:var(--ink); transform:translateY(-2px);}
+  .nav-toggle{display:none; background:none; border:1px solid #4247A0; color:#fff; padding:9px 12px; border-radius:8px; font-size:16px;}
 
-  /* ---------- HERO ---------- */
-  .hero{
-    position:relative;
-    padding:96px 0 80px;
-    border-bottom:1px solid var(--line-soft);
-    background:
-      radial-gradient(ellipse 900px 500px at 88% -10%, rgba(201,121,61,.14), transparent 60%),
-      repeating-linear-gradient(90deg, rgba(255,255,255,.025) 0 1px, transparent 1px 96px);
-  }
-  .hero .wrap{display:grid; grid-template-columns:1.15fr .85fr; gap:56px; align-items:center;}
-  .hero h1{
-    font-size:clamp(40px, 6vw, 70px);
-    margin:18px 0 22px;
-  }
-  .hero h1 .accent{color:var(--copper);}
-  .hero p.lead{
-    font-size:17.5px; color:var(--text-dim); max-width:52ch; margin-bottom:34px;
-  }
-  .hero-ctas{display:flex; gap:14px; flex-wrap:wrap; margin-bottom:40px;}
-  .hero-ctas .btn{padding:14px 26px; font-size:15px;}
+  /* HERO */
+  .hero{position:relative; padding:88px 0 100px; overflow:hidden;}
+  .hero::before{content:""; position:absolute; inset:0; background:radial-gradient(700px 480px at 82% 15%, rgba(255,197,61,.16), transparent 60%), radial-gradient(600px 500px at 10% 100%, rgba(110,134,255,.18), transparent 60%); pointer-events:none;}
+  .hero .wrap{position:relative; display:grid; grid-template-columns:1.1fr .9fr; gap:50px; align-items:center;}
+  .hero h1{font-size:clamp(40px, 6vw, 68px); margin:18px 0 22px; color:#fff;}
+  .hero h1 .accent{color:var(--voltage);}
+  .hero p.lead{font-size:17.5px; max-width:50ch; margin-bottom:34px;}
+  .hero-ctas{display:flex; gap:14px; flex-wrap:wrap; margin-bottom:38px;}
+  .hero-ctas .btn{padding:15px 28px; font-size:15px;}
+  .status-strip{display:flex; flex-wrap:wrap; gap:10px;}
+  .status-chip{display:flex; align-items:center; gap:8px; font-family:var(--font-mono); font-size:12px; letter-spacing:.04em; color:#C7CBEE; border:1px solid #34397E; padding:8px 13px; border-radius:999px;}
+  .status-chip .dot{width:7px; height:7px; border-radius:50%; background:var(--voltage); flex-shrink:0;}
 
-  .status-strip{
-    display:flex; flex-wrap:wrap; gap:10px;
-  }
-  .status-chip{
-    display:flex; align-items:center; gap:8px;
-    font-family:var(--font-mono); font-size:12px; letter-spacing:.05em;
-    color:var(--text-dim);
-    border:1px solid var(--line);
-    padding:7px 12px 7px 10px;
-    border-radius:2px;
-    background:var(--bg-alt);
-  }
-  .status-chip .dot{
-    width:7px; height:7px; border-radius:50%;
-    background:var(--live);
-    box-shadow:0 0 0 3px rgba(69,179,124,.18);
-    flex-shrink:0;
-  }
+  .burst-wrap{position:relative; display:flex; align-items:center; justify-content:center;}
+  .burst-core{fill:url(#burstGrad);}
+  .burst-ray{stroke:#3B3F94; stroke-width:2; opacity:.55;}
+  .burst-orbit{fill:none; stroke:#3B3F94; stroke-width:1; opacity:.5;}
+  .burst-dot{fill:var(--voltage);}
+  @keyframes spin{ to{ transform:rotate(360deg); } }
+  .burst-spin{animation:spin 34s linear infinite; transform-origin:200px 200px;}
+  @keyframes pulse{ 0%,100%{ opacity:.55; } 50%{ opacity:1; } }
+  .burst-core-glow{animation:pulse 3s ease-in-out infinite;}
 
-  .hero-panel{
-    border:1px solid var(--line);
-    background:linear-gradient(180deg, var(--bg-card), var(--bg-alt));
-    border-radius:6px;
-    padding:26px 24px;
-    position:relative;
-  }
-  .hero-panel::before{
-    content:"ANA PANO";
-    position:absolute; top:-11px; left:20px;
-    background:var(--bg);
-    padding:0 8px;
-    font-family:var(--font-mono); font-size:11px; letter-spacing:.14em;
-    color:var(--text-faint);
-  }
-  .hero-panel-row{
-    display:flex; justify-content:space-between; align-items:center;
-    padding:13px 4px;
-    border-bottom:1px solid var(--line-soft);
-    font-family:var(--font-mono); font-size:13px;
-  }
-  .hero-panel-row:last-child{border-bottom:none;}
-  .hero-panel-row span:first-child{color:var(--text-dim);}
-  .hero-panel-row .val{color:var(--copper-bright); font-weight:500;}
-
-  /* ---------- SECTION shared ---------- */
-  section{padding:96px 0;}
+  /* SECTION shared */
+  section{padding:100px 0;}
   .sec-head{max-width:640px; margin-bottom:56px;}
-  .sec-head h2{font-size:clamp(30px, 4vw, 46px); margin-top:14px;}
+  .sec-head h2{font-size:clamp(30px, 4vw, 44px); margin-top:14px;}
   .sec-head p{color:var(--text-dim); font-size:16px; margin-top:16px; max-width:56ch;}
 
-  /* ---------- SERVICES ---------- */
-  .services{background:var(--bg-alt); border-bottom:1px solid var(--line-soft);}
-  .service-grid{
-    display:grid; grid-template-columns:repeat(2, 1fr); gap:1px;
-    background:var(--line);
-    border:1px solid var(--line);
-  }
-  .service-card{
-    background:var(--bg-alt);
-    padding:34px 30px;
-    transition:background .2s ease;
-  }
-  .service-card:hover{background:#1c262e;}
-  .service-code{
-    font-family:var(--font-mono); font-size:12px; color:var(--copper);
-    letter-spacing:.1em; display:flex; align-items:center; gap:10px; margin-bottom:18px;
-  }
-  .breaker{
-    width:16px; height:22px; border:1.4px solid var(--copper); border-radius:2px;
-    position:relative; flex-shrink:0;
-  }
-  .breaker::after{
-    content:""; position:absolute; left:50%; top:3px; width:1.4px; height:9px;
-    background:var(--copper); transform:translateX(-50%) rotate(18deg); transform-origin:bottom;
-  }
-  .service-card h3{
-    font-family:var(--font-body); font-weight:700; font-size:20px; margin-bottom:10px; letter-spacing:0;
-  }
+  /* SERVICES */
+  .service-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:20px;}
+  .service-card{background:var(--white); border:1.5px solid var(--line); border-radius:20px; padding:30px 26px; transition:transform .2s ease, border-color .2s ease, box-shadow .2s ease;}
+  .service-card:hover{transform:translateY(-4px); border-color:var(--voltage-2); box-shadow:0 18px 34px -18px rgba(20,22,59,.25);}
+  .service-icon{width:46px; height:46px; border-radius:12px; background:#FFF3DA; display:flex; align-items:center; justify-content:center; margin-bottom:20px;}
+  .service-tag{font-family:var(--font-mono); font-size:11px; letter-spacing:.1em; color:var(--text-dim); text-transform:uppercase; margin-bottom:8px;}
+  .service-card h3{font-family:var(--font-body); font-weight:700; font-size:19px; margin-bottom:10px; letter-spacing:0;}
   .service-card p{color:var(--text-dim); font-size:14.5px;}
 
-  /* ---------- SERVICE AREA / SLD ---------- */
-  .area-diagram{
-    border:1px solid var(--line);
-    background:var(--bg-card);
-    border-radius:6px;
-    padding:34px 30px;
-    margin-bottom:34px;
-  }
-  .sld-line{
-    fill:none; stroke:var(--line); stroke-width:2;
-  }
-  .sld-flow{
-    fill:none; stroke:var(--copper); stroke-width:2;
-    stroke-dasharray:6 10;
-    animation:flow 2.6s linear infinite;
-  }
-  @keyframes flow{ to{ stroke-dashoffset:-160; } }
-  .sld-hub-box{ fill:var(--bg-alt); stroke:var(--line); stroke-width:1.4; }
-  .sld-hub-label{ font-family:var(--font-mono); font-size:14px; fill:var(--text-dim); letter-spacing:.06em;}
-  .sld-hub-title{ font-family:var(--font-display); font-size:23px; font-weight:800; fill:var(--text);}
-  .sld-node-dot{ fill:var(--live); }
-  .sld-node-ring{ fill:none; stroke:var(--live); stroke-width:1.2; opacity:.35; }
-  .sld-node-title{ font-family:var(--font-display); font-weight:700; font-size:25px; fill:var(--text);}
-  .sld-node-sub{ font-family:var(--font-mono); font-size:12px; fill:var(--text-faint); letter-spacing:.04em;}
-
+  /* SERVICE AREA (radial signature) */
+  .area-diagram{display:flex; justify-content:center; padding:20px 0 10px;}
   .area-mobile{display:none;}
-  .area-mobile-track{
-    position:relative;
-    padding-left:26px;
-    border-left:2px solid var(--line);
-    margin-left:8px;
-  }
-  .area-mobile-hub{
-    font-family:var(--font-mono); font-size:12px; color:var(--text-faint);
-    letter-spacing:.12em; margin-bottom:22px; margin-left:-34px; padding-left:0;
-    display:flex; align-items:center; gap:10px;
-  }
-  .area-mobile-hub .node-dot{background:var(--copper); box-shadow:0 0 0 4px var(--bg-card), 0 0 0 5px var(--line);}
+  .area-mobile-track{position:relative; padding-left:26px; border-left:2px solid #34397E; margin-left:8px;}
+  .area-mobile-hub{font-family:var(--font-mono); font-size:12px; color:#B9BEEA; letter-spacing:.1em; margin-bottom:22px; margin-left:-34px; display:flex; align-items:center; gap:10px;}
+  .area-mobile-hub .node-dot{position:static; box-shadow:none; background:var(--voltage);}
   .area-node{position:relative; padding-bottom:26px;}
   .area-node:last-child{padding-bottom:0;}
-  .node-dot{
-    position:absolute; left:-33px; top:5px;
-    width:11px; height:11px; border-radius:50%;
-    background:var(--live);
-    box-shadow:0 0 0 4px var(--bg-card), 0 0 0 5px var(--line);
-  }
-  .area-node h4{font-family:var(--font-display); font-weight:700; font-size:22px;}
-  .area-node p{font-family:var(--font-mono); font-size:12px; color:var(--text-faint); margin-top:2px; letter-spacing:.03em;}
+  .node-dot{position:absolute; left:-33px; top:5px; width:11px; height:11px; border-radius:50%; background:var(--voltage); box-shadow:0 0 0 4px var(--indigo), 0 0 0 5px #34397E;}
+  .area-node h4{font-family:var(--font-display); font-weight:700; font-size:21px; color:#fff;}
+  .area-node p{font-family:var(--font-mono); font-size:11.5px; color:#8B90C4; margin-top:2px; letter-spacing:.03em;}
+  .area-note{font-size:15.5px; max-width:74ch; margin-top:34px;}
+  .area-note b{color:#fff; font-weight:700;}
 
-  .area-note{color:var(--text-dim); font-size:15.5px; max-width:74ch;}
-  .area-note b{color:var(--text); font-weight:600;}
-
-  /* ---------- WHY US ---------- */
-  .why{border-bottom:1px solid var(--line-soft);}
-  .why-grid{display:grid; grid-template-columns:repeat(4, 1fr); gap:28px;}
-  .why-item{border-top:2px solid var(--copper); padding-top:18px;}
+  /* WHY */
+  .why-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:28px;}
+  .why-item{border-top:3px solid var(--voltage-2); padding-top:18px; border-radius:2px;}
   .why-item h3{font-family:var(--font-body); font-weight:700; font-size:17px; margin-bottom:8px;}
   .why-item p{color:var(--text-dim); font-size:14px;}
 
-  /* ---------- PROCESS ---------- */
-  .process{background:var(--bg-alt); border-bottom:1px solid var(--line-soft);}
-  .process-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:0; counter-reset:step;}
-  .process-item{
-    padding:0 30px 0 0;
-    border-right:1px solid var(--line-soft);
-  }
-  .process-item:last-child{border-right:none; padding-right:0;}
-  .process-num{
-    font-family:var(--font-mono); font-size:13px; color:var(--copper);
-    letter-spacing:.1em; margin-bottom:14px;
-  }
+  /* PROCESS */
+  .process-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:24px;}
+  .process-item{background:var(--white); border:1.5px solid var(--line); border-radius:20px; padding:28px 26px;}
+  .process-num{font-family:var(--font-mono); font-size:13px; color:var(--voltage-2); letter-spacing:.08em; margin-bottom:14px; font-weight:700;}
   .process-item h3{font-family:var(--font-body); font-weight:700; font-size:18px; margin-bottom:10px;}
   .process-item p{color:var(--text-dim); font-size:14.5px;}
 
-  /* ---------- CONTACT ---------- */
-  .contact .wrap{
-    display:grid; grid-template-columns:1.1fr .9fr; gap:60px; align-items:start;
-  }
-  .contact h2{font-size:clamp(30px,4vw,46px); margin-top:14px; max-width:14ch;}
-  .contact p.lead{color:var(--text-dim); font-size:16.5px; margin-top:18px; max-width:48ch;}
+  /* CONTACT */
+  .contact .wrap{display:grid; grid-template-columns:1.1fr .9fr; gap:60px; align-items:start;}
+  .contact h2{font-size:clamp(30px,4vw,44px); margin-top:14px; max-width:14ch; color:#fff;}
+  .contact p.lead{font-size:16.5px; margin-top:18px; max-width:48ch;}
   .contact-ctas{display:flex; gap:14px; margin-top:32px; flex-wrap:wrap;}
-  .contact-panel{
-    border:1px solid var(--line); border-radius:6px; background:var(--bg-card); padding:30px;
-  }
-  .contact-row{padding:16px 0; border-bottom:1px solid var(--line-soft);}
+  .contact-panel{border:1px solid #34397E; border-radius:20px; background:#242869; padding:8px 30px;}
+  .contact-row{padding:18px 0; border-bottom:1px solid #34397E;}
   .contact-row:last-child{border-bottom:none;}
-  .contact-row .label{
-    font-family:var(--font-mono); font-size:11px; letter-spacing:.14em; color:var(--text-faint); text-transform:uppercase;
-  }
-  .contact-row .val{font-size:16px; margin-top:6px; font-weight:500;}
-  .contact-row a.val:hover{color:var(--copper-bright);}
+  .contact-row .label{font-family:var(--font-mono); font-size:11px; letter-spacing:.12em; color:#8B90C4; text-transform:uppercase;}
+  .contact-row .val{font-size:16px; margin-top:6px; font-weight:600; color:#fff; display:inline-block;}
+  .contact-row a.val:hover{color:var(--voltage);}
 
-  /* ---------- FOOTER ---------- */
-  footer{padding:34px 0; border-top:1px solid var(--line-soft);}
-  footer .wrap{
-    display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px;
-  }
-  footer p{font-size:12.5px; color:var(--text-faint); font-family:var(--font-mono);}
+  footer{padding:32px 0; border-top:1px solid #34397E;}
+  footer .wrap{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px;}
+  footer p{font-size:12.5px; color:#8B90C4; font-family:var(--font-mono);}
 
-  /* ---------- RESPONSIVE ---------- */
   @media (max-width:980px){
     .hero .wrap{grid-template-columns:1fr; gap:44px;}
-    .service-grid{grid-template-columns:1fr;}
+    .hero .burst-wrap{order:-1;}
+    .service-grid{grid-template-columns:repeat(2,1fr);}
     .why-grid{grid-template-columns:repeat(2,1fr); row-gap:32px;}
-    .process-grid{grid-template-columns:1fr; row-gap:30px;}
-    .process-item{border-right:none; border-bottom:1px solid var(--line-soft); padding:0 0 26px 0;}
-    .process-item:last-child{border-bottom:none; padding-bottom:0;}
+    .process-grid{grid-template-columns:1fr;}
     .contact .wrap{grid-template-columns:1fr; gap:38px;}
   }
   @media (max-width:759px){
@@ -373,31 +197,25 @@
     .area-mobile{display:block;}
   }
   @media (max-width:680px){
-    .nav-links{
-      position:fixed; inset:64px 0 auto 0; background:var(--bg);
-      flex-direction:column; align-items:flex-start; gap:0;
-      border-bottom:1px solid var(--line-soft);
-      transform:translateY(-120%); opacity:0; pointer-events:none;
-      transition:transform .25s ease, opacity .25s ease;
-      padding:8px 28px 20px;
-    }
+    .nav-links{position:fixed; inset:64px 0 auto 0; background:var(--indigo); flex-direction:column; align-items:flex-start; gap:0; border-bottom:1px solid #34397E; transform:translateY(-120%); opacity:0; pointer-events:none; transition:transform .25s ease, opacity .25s ease; padding:8px 28px 20px;}
     .nav-links.open{transform:translateY(0); opacity:1; pointer-events:auto;}
-    .nav-links a{padding:14px 0; width:100%; border-bottom:1px solid var(--line-soft); font-size:16px;}
+    .nav-links a{padding:14px 0; width:100%; border-bottom:1px solid #34397E; font-size:16px;}
     .nav-cta .btn-ghost{display:none;}
     .nav-toggle{display:block;}
-    .hero{padding:56px 0 64px;}
+    .hero{padding:52px 0 64px;}
     section{padding:64px 0;}
+    .service-grid{grid-template-columns:1fr;}
     .why-grid{grid-template-columns:1fr;}
   }
   @media (max-width:420px){
     .wrap{padding:0 20px;}
     .hero-ctas .btn, .contact-ctas .btn{width:100%; justify-content:center;}
   }
-
   @media (prefers-reduced-motion: reduce){
     html{scroll-behavior:auto;}
-    .sld-flow{animation:none;}
-    .btn{transition:none;}
+    .burst-spin{animation:none;}
+    .burst-core-glow{animation:none;}
+    .btn, .service-card{transition:none;}
   }
 </style>
 </head>
@@ -405,7 +223,7 @@
 
 <header class="site">
   <nav class="nav">
-    <a href="#top" class="logo"><span class="mark">P</span>EKER<small>&nbsp;ENERJİ</small></a>
+    <a href="#top" class="logo"><span class="logo-mark">P</span><span>PEKER<small>ENERJİ</small></span></a>
     <ul class="nav-links" id="navLinks">
       <li><a href="#hizmetler">Hizmetler</a></li>
       <li><a href="#bolge">Hizmet Bölgesi</a></li>
@@ -413,7 +231,7 @@
       <li><a href="#iletisim">İletişim</a></li>
     </ul>
     <div class="nav-cta">
-      <a class="btn btn-ghost" href="https://wa.me/90XXXXXXXXXX" target="_blank" rel="noopener">WhatsApp</a>
+      <a class="btn btn-ghost" href="https://wa.me/90XXXXXXXXXX" target="_blank" rel="noopener" style="border-color:#4247A0;color:#fff;">WhatsApp</a>
       <a class="btn btn-primary" href="tel:+90XXXXXXXXXX">0324 XXX XX XX</a>
       <button class="nav-toggle" id="navToggle" aria-label="Menüyü aç" aria-expanded="false">☰</button>
     </div>
@@ -422,8 +240,7 @@
 
 <main id="top">
 
-  <!-- HERO -->
-  <section class="hero">
+  <section class="hero dark">
     <div class="wrap">
       <div>
         <p class="eyebrow">MERSİN ELEKTRİK &amp; ENERJİ ÇÖZÜMLERİ</p>
@@ -431,7 +248,7 @@
         <p class="lead">Peker Enerji; Toroslar, Mezitli, Tece ve Akdeniz'de elektrik tesisatından güneş enerjisine, jeneratörden kesintisiz güç kaynağına kadar tüm enerji ihtiyaçlarınızda yanınızda.</p>
         <div class="hero-ctas">
           <a class="btn btn-primary" href="tel:+90XXXXXXXXXX">Hemen Ara — 0324 XXX XX XX</a>
-          <a class="btn btn-ghost" href="https://wa.me/90XXXXXXXXXX" target="_blank" rel="noopener">WhatsApp'tan Yaz</a>
+          <a class="btn btn-ghost" href="https://wa.me/90XXXXXXXXXX" target="_blank" rel="noopener" style="border-color:#4247A0;color:#fff;">WhatsApp'tan Yaz</a>
         </div>
         <div class="status-strip">
           <span class="status-chip"><span class="dot"></span>TOROSLAR</span>
@@ -441,107 +258,128 @@
         </div>
       </div>
 
-      <div class="hero-panel">
-        <div class="hero-panel-row"><span>Elektrik Tesisatı &amp; Pano</span><span class="val">AKTİF</span></div>
-        <div class="hero-panel-row"><span>Jeneratör Satış / Servis</span><span class="val">AKTİF</span></div>
-        <div class="hero-panel-row"><span>Güneş Enerjisi (GES)</span><span class="val">AKTİF</span></div>
-        <div class="hero-panel-row"><span>UPS / Akü Sistemleri</span><span class="val">AKTİF</span></div>
-        <div class="hero-panel-row"><span>Hizmet Bölgesi</span><span class="val">Mersin</span></div>
+      <div class="burst-wrap">
+        <svg viewBox="0 0 400 400" width="100%" style="max-width:420px;">
+          <defs>
+            <radialGradient id="burstGrad" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#FFE49A"/>
+              <stop offset="55%" stop-color="#FFC53D"/>
+              <stop offset="100%" stop-color="#F2A900"/>
+            </radialGradient>
+          </defs>
+          <circle class="burst-orbit" cx="200" cy="200" r="150"></circle>
+          <circle class="burst-orbit" cx="200" cy="200" r="110"></circle>
+          <g class="burst-spin">
+            <g class="burst-ray">
+              <line x1="200" y1="30" x2="200" y2="60"></line>
+              <line x1="200" y1="370" x2="200" y2="340"></line>
+              <line x1="30" y1="200" x2="60" y2="200"></line>
+              <line x1="370" y1="200" x2="340" y2="200"></line>
+              <line x1="94" y1="94" x2="115" y2="115"></line>
+              <line x1="306" y1="306" x2="285" y2="285"></line>
+              <line x1="306" y1="94" x2="285" y2="115"></line>
+              <line x1="94" y1="306" x2="115" y2="285"></line>
+            </g>
+            <circle class="burst-dot" cx="200" cy="60" r="5"></circle>
+            <circle class="burst-dot" cx="340" cy="200" r="4"></circle>
+            <circle class="burst-dot" cx="200" cy="340" r="4"></circle>
+            <circle class="burst-dot" cx="60" cy="200" r="4"></circle>
+          </g>
+          <circle class="burst-core-glow" cx="200" cy="200" r="78" fill="#FFC53D" opacity=".18"></circle>
+          <circle class="burst-core" cx="200" cy="200" r="58"></circle>
+          <text x="200" y="196" text-anchor="middle" font-family="Bricolage Grotesque, sans-serif" font-weight="800" font-size="19" fill="#1E2266">PEKER</text>
+          <text x="200" y="216" text-anchor="middle" font-family="Space Mono, monospace" font-size="10" letter-spacing="1.5" fill="#4A3200">ENERJİ</text>
+        </svg>
       </div>
     </div>
   </section>
 
-  <!-- SERVICES -->
-  <section class="services" id="hizmetler">
+  <section id="hizmetler">
     <div class="wrap">
       <div class="sec-head">
         <p class="eyebrow">HİZMETLERİMİZ</p>
-        <h2>Panodan çatıya,<br>jeneratörden aküye.</h2>
+        <h2>Panodan çatıya, jeneratörden aküye.</h2>
         <p>Mersin genelinde konut, işyeri ve sanayi tesislerine uçtan uca enerji hizmeti sunuyoruz.</p>
       </div>
-    </div>
-    <div class="service-grid">
-      <div class="service-card">
-        <div class="service-code"><span class="breaker"></span>DEVRE 01 — ELEKTRİK</div>
-        <h3>Elektrik Tesisatı &amp; Pano İşleri</h3>
-        <p>Konut ve işyerlerinde sıfırdan tesisat, pano montajı, topraklama ölçümü ve periyodik bakım.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-code"><span class="breaker"></span>DEVRE 02 — JENERATÖR</div>
-        <h3>Jeneratör Satış &amp; Servis</h3>
-        <p>Elektrik kesintilerine karşı jeneratör temini, devreye alma, periyodik bakım ve arıza müdahalesi.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-code"><span class="breaker"></span>DEVRE 03 — GES</div>
-        <h3>Güneş Enerji Sistemleri</h3>
-        <p>Çatı ve arazi tipi güneş enerji sistemleri için keşif, kurulum ve üretim takibi; faturanızı düşürün.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-code"><span class="breaker"></span>DEVRE 04 — UPS</div>
-        <h3>UPS / Akü Sistemleri</h3>
-        <p>Kritik cihaz ve sistemleriniz için kesintisiz güç kaynağı kurulumu, akü değişimi ve bakım hizmeti.</p>
+      <div class="service-grid">
+        <div class="service-card">
+          <div class="service-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M13 2 4 14h7l-1 8 9-12h-7z" fill="#F2A900"/></svg></div>
+          <div class="service-tag">Elektrik</div>
+          <h3>Elektrik Tesisatı &amp; Pano İşleri</h3>
+          <p>Konut ve işyerlerinde sıfırdan tesisat, pano montajı, topraklama ölçümü ve periyodik bakım.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M13 2 4 14h7l-1 8 9-12h-7z" fill="#F2A900"/></svg></div>
+          <div class="service-tag">Jeneratör</div>
+          <h3>Jeneratör Satış &amp; Servis</h3>
+          <p>Elektrik kesintilerine karşı jeneratör temini, devreye alma, periyodik bakım ve arıza müdahalesi.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M13 2 4 14h7l-1 8 9-12h-7z" fill="#F2A900"/></svg></div>
+          <div class="service-tag">GES</div>
+          <h3>Güneş Enerji Sistemleri</h3>
+          <p>Çatı ve arazi tipi güneş enerji sistemleri için keşif, kurulum ve üretim takibi; faturanızı düşürün.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M13 2 4 14h7l-1 8 9-12h-7z" fill="#F2A900"/></svg></div>
+          <div class="service-tag">UPS</div>
+          <h3>UPS / Akü Sistemleri</h3>
+          <p>Kritik cihaz ve sistemleriniz için kesintisiz güç kaynağı kurulumu, akü değişimi ve bakım hizmeti.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- SERVICE AREA -->
-  <section id="bolge">
+  <section class="dark" id="bolge">
     <div class="wrap">
       <div class="sec-head">
         <p class="eyebrow">HİZMET BÖLGESİ</p>
-        <h2>Mersin'in dört yakasında<br>tek pano.</h2>
+        <h2 style="color:#fff;">Mersin'in dört yakasına<br>tek merkezden güç.</h2>
         <p>Ana ekibimiz; Toroslar, Mezitli, Tece ve Akdeniz'de aynı gün keşif ve servis imkanı sunar.</p>
       </div>
 
-      <!-- Desktop schematic -->
       <div class="area-diagram">
-        <svg viewBox="0 0 1000 520" role="img" aria-labelledby="sldTitle">
-          <title id="sldTitle">Peker Enerji hizmet bölgesi şeması: Toroslar, Mezitli, Tece ve Akdeniz</title>
+        <svg viewBox="0 0 700 700" width="100%" style="max-width:620px;">
+          <line x1="350" y1="350" x2="610" y2="140" class="burst-ray" stroke="#4247A0" stroke-width="2"></line>
+          <line x1="350" y1="350" x2="610" y2="560" class="burst-ray" stroke="#4247A0" stroke-width="2"></line>
+          <line x1="350" y1="350" x2="90" y2="560" class="burst-ray" stroke="#4247A0" stroke-width="2"></line>
+          <line x1="350" y1="350" x2="90" y2="140" class="burst-ray" stroke="#4247A0" stroke-width="2"></line>
 
-          <path class="sld-line" d="M 230 260 H 470 V 60 H 690"></path>
-          <path class="sld-flow" d="M 230 260 H 470 V 60 H 690"></path>
-          <path class="sld-line" d="M 230 260 H 470 V 200 H 690"></path>
-          <path class="sld-flow" d="M 230 260 H 470 V 200 H 690"></path>
-          <path class="sld-line" d="M 230 260 H 470 V 340 H 690"></path>
-          <path class="sld-flow" d="M 230 260 H 470 V 340 H 690"></path>
-          <path class="sld-line" d="M 230 260 H 470 V 470 H 690"></path>
-          <path class="sld-flow" d="M 230 260 H 470 V 470 H 690"></path>
+          <line x1="350" y1="350" x2="610" y2="140" stroke="#FFC53D" stroke-width="2.5" stroke-dasharray="4 12" opacity=".9"><animate attributeName="stroke-dashoffset" from="0" to="-64" dur="2.4s" repeatCount="indefinite"/></line>
+          <line x1="350" y1="350" x2="610" y2="560" stroke="#FFC53D" stroke-width="2.5" stroke-dasharray="4 12" opacity=".9"><animate attributeName="stroke-dashoffset" from="0" to="-64" dur="2.4s" repeatCount="indefinite"/></line>
+          <line x1="350" y1="350" x2="90" y2="560" stroke="#FFC53D" stroke-width="2.5" stroke-dasharray="4 12" opacity=".9"><animate attributeName="stroke-dashoffset" from="0" to="-64" dur="2.4s" repeatCount="indefinite"/></line>
+          <line x1="350" y1="350" x2="90" y2="140" stroke="#FFC53D" stroke-width="2.5" stroke-dasharray="4 12" opacity=".9"><animate attributeName="stroke-dashoffset" from="0" to="-64" dur="2.4s" repeatCount="indefinite"/></line>
 
-          <rect class="sld-hub-box" x="60" y="215" width="170" height="90" rx="6"></rect>
-          <text class="sld-hub-title" x="80" y="255">PEKER</text>
-          <text class="sld-hub-label" x="80" y="280">ANA PANO</text>
+          <circle cx="350" cy="350" r="68" fill="#242869" stroke="#4247A0" stroke-width="1.4"></circle>
+          <text x="350" y="345" text-anchor="middle" font-family="Bricolage Grotesque, sans-serif" font-weight="800" font-size="19" fill="#fff">PEKER</text>
+          <text x="350" y="365" text-anchor="middle" font-family="Space Mono, monospace" font-size="10" letter-spacing="1.5" fill="#B9BEEA">ANA MERKEZ</text>
 
           <g>
-            <circle class="sld-node-ring" cx="700" cy="60" r="13"></circle>
-            <circle class="sld-node-dot" cx="700" cy="60" r="5"></circle>
-            <text class="sld-node-title" x="722" y="68">Toroslar</text>
-            <text class="sld-node-sub" x="722" y="86">ELEKTRİK · JENERATÖR</text>
+            <circle cx="610" cy="140" r="6" fill="#FFC53D"></circle>
+            <text x="628" y="136" font-family="Bricolage Grotesque, sans-serif" font-weight="700" font-size="24" fill="#fff">Toroslar</text>
+            <text x="628" y="154" font-family="Space Mono, monospace" font-size="11" fill="#8B90C4">ELEKTRİK · JENERATÖR</text>
           </g>
           <g>
-            <circle class="sld-node-ring" cx="700" cy="200" r="13"></circle>
-            <circle class="sld-node-dot" cx="700" cy="200" r="5"></circle>
-            <text class="sld-node-title" x="722" y="208">Mezitli</text>
-            <text class="sld-node-sub" x="722" y="226">GES · UPS · AKÜ</text>
+            <circle cx="610" cy="560" r="6" fill="#FFC53D"></circle>
+            <text x="628" y="556" font-family="Bricolage Grotesque, sans-serif" font-weight="700" font-size="24" fill="#fff">Mezitli</text>
+            <text x="628" y="574" font-family="Space Mono, monospace" font-size="11" fill="#8B90C4">GES · UPS · AKÜ</text>
           </g>
           <g>
-            <circle class="sld-node-ring" cx="700" cy="340" r="13"></circle>
-            <circle class="sld-node-dot" cx="700" cy="340" r="5"></circle>
-            <text class="sld-node-title" x="722" y="348">Tece</text>
-            <text class="sld-node-sub" x="722" y="366">ELEKTRİK · GES</text>
+            <circle cx="90" cy="560" r="6" fill="#FFC53D"></circle>
+            <text x="72" y="556" text-anchor="end" font-family="Bricolage Grotesque, sans-serif" font-weight="700" font-size="24" fill="#fff">Tece</text>
+            <text x="72" y="574" text-anchor="end" font-family="Space Mono, monospace" font-size="11" fill="#8B90C4">ELEKTRİK · GES</text>
           </g>
           <g>
-            <circle class="sld-node-ring" cx="700" cy="470" r="13"></circle>
-            <circle class="sld-node-dot" cx="700" cy="470" r="5"></circle>
-            <text class="sld-node-title" x="722" y="478">Akdeniz</text>
-            <text class="sld-node-sub" x="722" y="496">JENERATÖR · UPS</text>
+            <circle cx="90" cy="140" r="6" fill="#FFC53D"></circle>
+            <text x="72" y="136" text-anchor="end" font-family="Bricolage Grotesque, sans-serif" font-weight="700" font-size="24" fill="#fff">Akdeniz</text>
+            <text x="72" y="154" text-anchor="end" font-family="Space Mono, monospace" font-size="11" fill="#8B90C4">JENERATÖR · UPS</text>
           </g>
         </svg>
       </div>
 
-      <!-- Mobile list version -->
       <div class="area-mobile">
         <div class="area-mobile-track">
-          <div class="area-mobile-hub"><span class="node-dot" style="position:static;box-shadow:none;background:var(--copper);"></span>PEKER ENERJİ — ANA PANO</div>
+          <div class="area-mobile-hub"><span class="node-dot"></span>PEKER ENERJİ — ANA MERKEZ</div>
           <div class="area-node"><span class="node-dot"></span><h4>Toroslar</h4><p>ELEKTRİK · JENERATÖR</p></div>
           <div class="area-node"><span class="node-dot"></span><h4>Mezitli</h4><p>GES · UPS · AKÜ</p></div>
           <div class="area-node"><span class="node-dot"></span><h4>Tece</h4><p>ELEKTRİK · GES</p></div>
@@ -553,63 +391,36 @@
     </div>
   </section>
 
-  <!-- WHY US -->
-  <section class="why" id="neden-biz">
+  <section id="neden-biz">
     <div class="wrap">
       <div class="sec-head">
         <p class="eyebrow">NEDEN PEKER ENERJİ</p>
-        <h2>Güvenle çalıştığınız pano.</h2>
+        <h2>Güvenle çalıştığınız ekip.</h2>
       </div>
       <div class="why-grid">
-        <div class="why-item">
-          <h3>Sertifikalı Ekip</h3>
-          <p>Elektrik, jeneratör, GES ve UPS konularında deneyimli, sertifikalı teknik kadro.</p>
-        </div>
-        <div class="why-item">
-          <h3>Şeffaf Teklif</h3>
-          <p>Keşif sonrası net kapsam ve fiyatla teklif; sürpriz ek ücret yok.</p>
-        </div>
-        <div class="why-item">
-          <h3>Garantili İşçilik</h3>
-          <p>Kurulum sonrası garanti ve düzenli periyodik bakım desteği.</p>
-        </div>
-        <div class="why-item">
-          <h3>Hızlı Müdahale</h3>
-          <p>Toroslar, Mezitli, Tece ve Akdeniz'de aynı gün yönlendirme imkanı.</p>
-        </div>
+        <div class="why-item"><h3>Sertifikalı Ekip</h3><p>Elektrik, jeneratör, GES ve UPS konularında deneyimli, sertifikalı teknik kadro.</p></div>
+        <div class="why-item"><h3>Şeffaf Teklif</h3><p>Keşif sonrası net kapsam ve fiyatla teklif; sürpriz ek ücret yok.</p></div>
+        <div class="why-item"><h3>Garantili İşçilik</h3><p>Kurulum sonrası garanti ve düzenli periyodik bakım desteği.</p></div>
+        <div class="why-item"><h3>Hızlı Müdahale</h3><p>Toroslar, Mezitli, Tece ve Akdeniz'de aynı gün yönlendirme imkanı.</p></div>
       </div>
     </div>
   </section>
 
-  <!-- PROCESS -->
-  <section class="process">
+  <section style="background:#F4F1E7; padding-top:0;">
     <div class="wrap">
       <div class="sec-head">
         <p class="eyebrow">NASIL ÇALIŞIYORUZ</p>
         <h2>Üç adımda enerjiniz güvende.</h2>
       </div>
       <div class="process-grid">
-        <div class="process-item">
-          <div class="process-num">ADIM 01</div>
-          <h3>İletişim &amp; Keşif</h3>
-          <p>Talebinizi iletin; ekibimiz yerinde veya uzaktan keşif yapıp ihtiyacınızı netleştirsin.</p>
-        </div>
-        <div class="process-item">
-          <div class="process-num">ADIM 02</div>
-          <h3>Teklif &amp; Planlama</h3>
-          <p>Kapsamı ve fiyatı net şekilde ortaya koyan bir teklifle işi birlikte planlayalım.</p>
-        </div>
-        <div class="process-item">
-          <div class="process-num">ADIM 03</div>
-          <h3>Kurulum &amp; Servis</h3>
-          <p>İşi zamanında teslim edelim; sonrasında bakım ve arıza desteğiyle yanınızda kalalım.</p>
-        </div>
+        <div class="process-item"><div class="process-num">ADIM 01</div><h3>İletişim &amp; Keşif</h3><p>Talebinizi iletin; ekibimiz yerinde veya uzaktan keşif yapıp ihtiyacınızı netleştirsin.</p></div>
+        <div class="process-item"><div class="process-num">ADIM 02</div><h3>Teklif &amp; Planlama</h3><p>Kapsamı ve fiyatı net şekilde ortaya koyan bir teklifle işi birlikte planlayalım.</p></div>
+        <div class="process-item"><div class="process-num">ADIM 03</div><h3>Kurulum &amp; Servis</h3><p>İşi zamanında teslim edelim; sonrasında bakım ve arıza desteğiyle yanınızda kalalım.</p></div>
       </div>
     </div>
   </section>
 
-  <!-- CONTACT -->
-  <section class="contact" id="iletisim">
+  <section class="contact dark" id="iletisim">
     <div class="wrap">
       <div>
         <p class="eyebrow">İLETİŞİM</p>
@@ -617,33 +428,21 @@
         <p class="lead">Elektrik, jeneratör, GES ya da UPS — ihtiyacınızı anlatın, Mersin'in her noktasında size en uygun çözümü sunalım.</p>
         <div class="contact-ctas">
           <a class="btn btn-primary" href="tel:+90XXXXXXXXXX">Hemen Ara</a>
-          <a class="btn btn-ghost" href="https://wa.me/90XXXXXXXXXX" target="_blank" rel="noopener">WhatsApp'tan Yaz</a>
+          <a class="btn btn-ghost" href="https://wa.me/90XXXXXXXXXX" target="_blank" rel="noopener" style="border-color:#4247A0;color:#fff;">WhatsApp'tan Yaz</a>
         </div>
       </div>
       <div class="contact-panel">
-        <div class="contact-row">
-          <div class="label">Telefon</div>
-          <a class="val" href="tel:+90XXXXXXXXXX">0324 XXX XX XX</a>
-        </div>
-        <div class="contact-row">
-          <div class="label">WhatsApp</div>
-          <a class="val" href="https://wa.me/90XXXXXXXXXX" target="_blank" rel="noopener">05XX XXX XX XX</a>
-        </div>
-        <div class="contact-row">
-          <div class="label">E-posta</div>
-          <a class="val" href="mailto:info@pekerenerji.com">info@pekerenerji.com</a>
-        </div>
-        <div class="contact-row">
-          <div class="label">Hizmet Bölgesi</div>
-          <div class="val">Toroslar · Mezitli · Tece · Akdeniz, Mersin</div>
-        </div>
+        <div class="contact-row"><div class="label">Telefon</div><a class="val" href="tel:+90XXXXXXXXXX">0324 XXX XX XX</a></div>
+        <div class="contact-row"><div class="label">WhatsApp</div><a class="val" href="https://wa.me/90XXXXXXXXXX" target="_blank" rel="noopener">05XX XXX XX XX</a></div>
+        <div class="contact-row"><div class="label">E-posta</div><a class="val" href="mailto:info@pekerenerji.com">info@pekerenerji.com</a></div>
+        <div class="contact-row"><div class="label">Hizmet Bölgesi</div><div class="val">Toroslar · Mezitli · Tece · Akdeniz, Mersin</div></div>
       </div>
     </div>
   </section>
 
 </main>
 
-<footer>
+<footer class="dark">
   <div class="wrap">
     <p>© <span id="year"></span> Peker Enerji. Tüm hakları saklıdır.</p>
     <p>Peker Enerji — Toroslar, Mezitli, Tece, Akdeniz elektrik, jeneratör, güneş enerjisi ve UPS hizmetleri, Mersin.</p>
